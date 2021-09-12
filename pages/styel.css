@@ -1,0 +1,47 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+.container{
+    margin: auto;
+    width: 100%;
+}
+header{
+    background-color: grey;
+    height: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+main{
+    height: 400px;
+    border: 2px solid red;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: cyan;
+    height: 100%;
+    border-radius: 20px;
+}
+main article{
+    width: 70%;
+    border: 2px solid blue;
+    height: 100%;
+
+}
+main article .sec-1{
+    height: 50%;
+    width: 100%;
+    background-color: greenyellow;
+    border-radius: 20px;
+}
+main article .sec-2{
+    height: 50%;
+    width: 100%;
+    background-color: orange;
+    border-radius: 20px;
+}
+aside{
+    height: 100;
+    width:50%;
+    background-color: purple;
+
+}
