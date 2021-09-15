@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical - 10</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Baloo Bhai 2", cursive;
+      }
+      .header {
+        width: 100%;
+        height: 80px;
+        top: 0;
+        position: fixed;
+        background-color: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header img {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+      }
+      .header h1 {
+        line-height: 80px;
+        color: white;
+      }
+      .content {
+        width: 100%;
+        padding: 25px;
+        transition: 0.8s;
+        /* float: right; */
+      }
+      .content img {
+        width: 100%;
+        max-width: 750px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+      .content p {
+        text-align: justify;
+      }
+      .sidebar {
+        width: 20%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        margin-top: 80px;
+        background-color: #353b48;
+        left: -100%;
+        transition: 0.9s;
+      }
+      .sidebar ul {
+        list-style: none;
+      }
+      .sidebar ul li {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-size: 21px;
+        padding: 15px 25px;
+        transition: 0.5s;
+      }
+      a i {
+        margin-right: 15px;
+      }
+      .sidebar ul li a:hover {
+        border-left: 9px solid white;
+      }
+      i {
+        font-size: 30px;
+        color: white;
+      }
+      .social {
+        margin: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 30px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+      }
+      .show-btn,
+      .hide-btn {
+        font-size: 40px;
+        color: white;
+        position: fixed;
+        transition: 0.4s;
+        top: 20px;
+        left: 50px;
+      }
+      .hide-btn {
+        opacity: 0;
+      }
+      #chk {
+        position: absolute;
+        visibility: hidden;
+        z-index: -100;
+      }
+      #chk:checked ~ .sidebar {
+        left: 0;
+      }
+      #chk:checked ~ .show-btn {
+        opacity: 0;
+      }
+      #chk:checked ~ .hide-btn {
+        opacity: 1;
+      }
+      #chk:checked ~ .content {
+        width: 80%;
+        max-width: 80%;
+        text-align: justify;
+      }
+      @media (max-width: 750px) {
+        .sidebar {
+          width: 100%;
+          text-align: center;
+        }
+        .header h1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="../Downloads/fullstack.png" alt="" />
+      <h1>FULLSTACK</h1>
+    </div>
+    <div class="content">
+      <img src="../Downloads/content-image.jpg" alt="" />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+        eligendi qui, voluptate at sed itaque minima laboriosam perferendis
+        earum, quia atque neque ab libero sapiente repudiandae pariatur
+        repellat. Quam corporis culpa quidem iure! Sunt, nihil rem perferendis
+        iste illum officia cumque, accusantium, facilis saepe eos alias
+        veritatis consequatur quidem maiores dicta asperiores ipsum optio
+        suscipit reprehenderit unde accusamus culpa. Expedita asperiores
+        eveniet, fuga voluptate sapiente officiis, eligendi, facere repudiandae
+        voluptatum ipsam nisi a! Ducimus voluptatibus dolore incidunt soluta
+        minima facere perferendis repellat reiciendis enim! Ducimus nisi, velit
+        possimus, tenetur expedita dicta veritatis fuga maxime recusandae nam
+        beatae voluptatum mollitia iure voluptate tempore vero odio a quo quod
+        et! Assumenda magni doloribus quia voluptatibus error ipsa quis dicta
+        nihil nisi quos ex, a, reiciendis iusto dolorem ipsum porro laborum
+        soluta vel ratione eius eum! Facere voluptatum quis eius nihil a
+        corporis error eos fuga aperiam voluptates placeat officia rem,
+        voluptate, eaque quidem quos incidunt. Consequatur voluptatibus dicta
+        molestias sint rem officiis voluptas neque sapiente tempore dolore
+        harum, quo enim eius veritatis incidunt excepturi accusamus aperiam
+        rerum deleniti eligendi id assumenda. Repudiandae expedita ducimus,
+        suscipit deserunt quisquam omnis perferendis repellendus iste non dicta
+        nisi, id dolores aut nulla illo. Nihil animi eum at quo omnis dolor
+        delectus deserunt. Blanditiis voluptatibus unde fugit explicabo corporis
+        beatae, harum ea vero odio temporibus id maxime rerum iste quisquam
+        alias quaerat dolore reiciendis quibusdam laudantium cupiditate
+        assumenda, ducimus exercitationem. Iure modi, illo quia cumque error
+        pariatur facilis repellat perspiciatis reprehenderit, nemo accusamus
+        maiores sequi iusto expedita omnis suscipit quod ducimus unde doloremque
+        in dignissimos odit tenetur. Cum, non nisi quidem deleniti omnis
+        provident esse, est minus earum consequuntur distinctio dolorem magnam
+        vero incidunt accusamus sint ullam, et atque ipsam. A excepturi sequi
+        iste beatae? Beatae deleniti perspiciatis molestiae sapiente vitae
+        consectetur, voluptas dolores ab! Quisquam unde reiciendis, expedita
+        pariatur eveniet consequatur similique cumque est? Dolor vero voluptatem
+        ex ullam? Cumque ut quos voluptate quae eius a consectetur quas?
+        Voluptatum suscipit eum accusamus eveniet animi iusto corporis
+        doloremque sint quibusdam unde. Iste illo deserunt, iusto aut inventore
+        nemo quae rerum praesentium libero soluta id maiores consequatur ullam
+        debitis. Praesentium tempore, ea fuga optio quasi natus iure maiores
+        recusandae quis eligendi. Pariatur laborum dolorem, id laboriosam
+        cupiditate.
+      </p>
+    </div>
+    <input type="checkbox" name="" id="chk" />
+    <label for="chk" class="show-btn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+      <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#"
+            ><i class="fa fa-home"><span>&nbsp;&nbsp; Home</span></i></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-user"><span>&nbsp;&nbsp; About</span></i></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-tasks"><span>&nbsp;&nbsp; Services</span></i></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-rss"><span>&nbsp;&nbsp; Blog</span></i></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa fa-id-card"><span>&nbsp;&nbsp; Contact</span></i></a
+          >
+        </li>
+      </ul>
+      <div class="social">
+        <a href=""><i class="fa fa-facebook-square"></i></a>
+        <a href=""><i class="fa fa-youtube-square"></i></a>
+        <a href=""><i class="fa fa-twitter-square"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
