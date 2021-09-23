@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical - 11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Baloo Bhai 2", cursive;
+      }
+      .main {
+        width: 100%;
+        height: 100px;
+        color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+      }
+      footer {
+        width: 100%;
+        background-color: rgb(73, 72, 72);
+      }
+      .sec1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 10px;
+      }
+      .about {
+        width: 40%;
+      }
+      .about h2 {
+        color: lightgrey;
+        font-size: 21px;
+      }
+      .about p {
+        text-align: justify;
+        color: grey;
+      }
+      .sec1 ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+      a:hover {
+        color: yellow;
+      }
+      .sec1 h2 {
+        color: lightgrey;
+      }
+      .link3 span {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: grey;
+      }
+      .link3 i {
+        color: grey;
+      }
+      .sec2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .sec2 h2 {
+        color: grey;
+        font-size: 22px;
+        padding: 0;
+      }
+      .sec2 a {
+        display: inline-block;
+        color: white;
+        background-color: red;
+        padding: 6px 21px;
+        border-radius: 20px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+      .sec2 a:hover {
+        background-color: orange;
+      }
+      .sec3 {
+        display: flex;
+        justify-content: center;
+      }
+      .sec3 ul {
+        list-style: none;
+        margin: 20px;
+      }
+      .sec3 ul li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background-color: #424242;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .sec3 ul li i {
+        color: white;
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+      .sec3 ul li:hover {
+        background-color: orange;
+      }
+      .sec4 {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding: 30px;
+      }
+      .sec4 p {
+        color: grey;
+        position: relative;
+      }
+      .sec4 p::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        background-color: yellow;
+        transition: all 0.3s;
+      }
+      .sec4 p:hover::after {
+        width: 100%;
+      }
+      hr {
+        opacity: 0.2;
+      }
+      @media (max-width: 800px) {
+        .main {
+          width: 100%;
+          height: 100px;
+          color: grey;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 45px;
+        }
+        footer {
+          width: 100%;
+          background-color: rgb(73, 72, 72);
+        }
+        .sec1 {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 30px 10px;
+        }
+        .about {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .about h2 {
+          color: lightgrey;
+          font-size: 21px;
+        }
+        .about p {
+          text-align: justify;
+          color: grey;
+        }
+        .sec1 ul {
+          list-style: none;
+        }
+        a {
+          text-decoration: none;
+          color: grey;
+        }
+        a:hover {
+          color: yellow;
+        }
+        .sec1 h2 {
+          color: lightgrey;
+        }
+        .link3 span {
+          margin-left: 10px;
+          margin-right: 10px;
+          color: grey;
+        }
+        .link3 i {
+          color: grey;
+        }
+        .sec2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+        .sec2 h2 {
+          color: grey;
+          font-size: 22px;
+          padding: 0;
+        }
+        .sec2 a {
+          display: inline-block;
+          color: white;
+          background-color: red;
+          padding: 6px 21px;
+          border-radius: 20px;
+          margin-left: 10px;
+          font-size: 20px;
+        }
+        .sec2 a:hover {
+          background-color: orange;
+        }
+        .sec3 {
+          display: flex;
+          justify-content: center;
+        }
+        .sec3 ul {
+          list-style: none;
+          margin: 20px;
+        }
+        .sec3 ul li {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          padding: 20px;
+          background-color: #424242;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+        .sec3 ul li i {
+          color: white;
+          font-size: 24px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .sec3 ul li:hover {
+          background-color: orange;
+        }
+        .sec4 {
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          padding: 30px;
+        }
+        .sec4 p {
+          color: grey;
+          position: relative;
+        }
+        .sec4 p::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          background-color: yellow;
+          transition: all 0.3s;
+        }
+        .sec4 p:hover::after {
+          width: 100%;
+        }
+        hr {
+          opacity: 0.2;
+        }
+      }
+      @media (max-width: 500px) {
+        .main {
+          width: 100%;
+          height: 100px;
+          color: grey;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 45px;
+        }
+        footer {
+          width: 100%;
+          background-color: rgb(73, 72, 72);
+        }
+        .sec1 {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 30px 10px;
+        }
+        .about {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .about h2 {
+          color: lightgrey;
+          font-size: 21px;
+        }
+        .about p {
+          text-align: justify;
+          color: grey;
+        }
+        .sec1 ul {
+          list-style: none;
+        }
+        a {
+          text-decoration: none;
+          color: grey;
+        }
+        a:hover {
+          color: yellow;
+        }
+        .sec1 h2 {
+          color: lightgrey;
+        }
+        .link3 span {
+          margin-left: 10px;
+          margin-right: 10px;
+          color: grey;
+        }
+        .link3 i {
+          color: grey;
+        }
+        .sec2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+        .sec2 h2 {
+          color: grey;
+          font-size: 22px;
+          padding: 0;
+        }
+        .sec2 a {
+          display: inline-block;
+          color: white;
+          background-color: red;
+          padding: 6px 21px;
+          border-radius: 20px;
+          margin-left: 10px;
+          font-size: 20px;
+        }
+        .sec2 a:hover {
+          background-color: orange;
+        }
+        .sec3 {
+          display: flex;
+          justify-content: center;
+        }
+        .sec3 ul {
+          list-style: none;
+          margin: 20px;
+        }
+        .sec3 ul li {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          padding: 20px;
+          background-color: #424242;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+        .sec3 ul li i {
+          color: white;
+          font-size: 24px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .sec3 ul li:hover {
+          background-color: orange;
+        }
+        .sec4 {
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          padding: 30px;
+        }
+        .sec4 p {
+          color: grey;
+          position: relative;
+        }
+        .sec4 p::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          background-color: yellow;
+          transition: all 0.3s;
+        }
+        .sec4 p:hover::after {
+          width: 100%;
+        }
+        hr {
+          opacity: 0.2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">Content Area</section>
+    <footer>
+      <section class="sec1">
+        <section class="about">
+          <h2>ABOUT</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
+            laboriosam nulla! Reprehenderit temporibus quas itaque accusamus,
+            quisquam odit aliquid repellat eos molestias magnam deserunt harum
+            dicta saepe praesentium corrupti voluptatibus velit voluptates hic
+            soluta neque ut. Illo odio ullam, hic non nesciunt accusamus minima
+            cumque? Commodi eos doloremque exercitationem magnam?
+          </p>
+        </section>
+        <section class="link1">
+          <h2>CATEGORIES</h2>
+          <ul>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Php</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Hybrid Apps</a></li>
+          </ul>
+        </section>
+        <section class="link2">
+          <h2>QUICK LINKS</h2>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Contribute</a></li>
+          </ul>
+        </section>
+        <section class="link3">
+          <h2>CONTACT US</h2>
+          <ul>
+            <li>
+              <i class="fa fa-home"></i><span>969 Anand Colony , India</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i
+              ><span>ayushgupta1915@gmail.com</span>
+            </li>
+            <li>
+              <i class="fa fa-phone-square"></i><span>Mobile : 6388649039</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <hr width="100%" />
+      <section class="sec2">
+        <h2>Register for Free</h2>
+        <a href="#"> Sign Up!</a>
+      </section>
+      <hr width="100%" />
+      <section class="sec3">
+        <ul>
+          <li><a href="#"></a><i class="fa fa-facebook"></i></li>
+          <li><a href="#"></a><i class="fa fa-twitter"></i></li>
+          <li><a href="#"></a><i class="fa fa-google"></i></li>
+          <li><a href="#"></a><i class="fa fa-linkedin"></i></li>
+          <li><a href="#"></a><i class="fa fa-dribbble"></i></li>
+        </ul>
+      </section>
+      <section class="sec4">
+        <p>Copyrights &copy; All Rights Reserved by Ayush Gupta</p>
+      </section>
+    </footer>
+  </body>
+</html>
