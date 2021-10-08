@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Play Table</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        table{
+            text-align: center;
+            line-height: 3px;
+            border-spacing: 1;
+            border-top: 20px solid white;
+            border-bottom: 20px solid white;
+            border-left: 20px solid white;
+            border-right: 20px solid white;
+            width: 60%;
+            margin: 20px auto;
+            border-radius: 8px;
+            padding-bottom: 15px;
+        }
+        th p{
+            color: rgb(131, 21,131);
+        }
+        thead{
+            text-align: center;
+            font-size: 40px;
+            padding:20px;
+        }
+        .btn{
+            background-color: rgb(131,21,131);
+            color: white;
+            font-size: 16px;
+            padding-left: 27px;
+            padding-right: 27px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+        .first_row{
+            color: rgb(10, 221, 10);
+        }
+        .btn:hover{
+            background-color: red;
+        }
+        tbody tr:nth-child(odd){
+            background-color: #cdeb97;
+        }
+        .head{
+            font-size: 25px;
+            color: rgb(133, 21, 133);
+        }
+        body{
+            background-color: rgb(241,237,237);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4"> SELECT YOUR PLAN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <p class="head"><i class="fa fa-building" style="color: rgb(133, 21, 133);"></i> Basic</p>
+                </th>
+                <th>
+                    <p class="head"><i class="fa fa-superpowers" style="color: rgb(133, 21, 133);"></i> Plus</p>
+                </th>
+                <th>
+                    <p class="head"><i class="fa fa-telegram" style="color: rgb(133, 21, 133);"></i> Deluxe</p>
+                </th>
+                <th>
+                    <p class="head"><i class="fa fa-tachometer" style="color: rgb(133, 21, 133);"></i> Pro</p>
+                </th>
+            </tr>
+            <tr class="first_row">
+                <td><h3>Rs.500/-</h3></td>
+                <td><h3>Rs.1500/-</h3></td>
+                <td><h3>Rs.2500/-</h3></td>
+                <td><h3>Rs.3500/-</h3></td>
+            </tr>
+            <tr>
+                <td><h3>50 Pages</h3></td>
+                <td><h3>75 Pages</h3></td>
+                <td><h3>Unlimited</h3></td>
+                <td><h3>Unlimited</h3></td>
+            </tr>
+            <tr>
+                <td><h3>10 Sites</h3></td>
+                <td><h3>25 Sites</h3></td>
+                <td><h3>100 Sites</h3></td>
+                <td><h3>Unlimited</h3></td>
+            </tr>
+            <tr>
+                <td><h3>50 MB</h3></td>
+                <td><h3>250 MB</h3></td>
+                <td><h3>1 GB</h3></td>
+                <td><h3>5 GB</h3></td>
+            </tr>
+            <tr>
+                <td><h3>included</h3></td>
+                <td><h3>included</h3></td>
+                <td><h3>included</h3></td>
+                <td><h3>included</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-times" style="color: red; font-size: 20px; padding: 7px;"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check" style="color: rgb(4, 199, 4); font-size: 20px; padding: 7px;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn">Sign Up</button>
+                </td>
+                <td>
+                    <button class="btn">Sign Up</button>
+                </td>
+                <td>
+                    <button class="btn">Sign Up</button>
+                </td>
+                <td>
+                    <button class="btn">Sign Up</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
