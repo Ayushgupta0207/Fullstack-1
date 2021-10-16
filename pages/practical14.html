@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical -14</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Baloo Bhai 2", cursive;
+            background-color: rgb(148, 148, 148);
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            color: rgb(253, 226, 186);
+            margin: 40px 5px;
+        }
+        #counter{
+            display: flex;
+            justify-content: center;
+        }
+        #minus{
+           height: 80px;
+           width: 80px;
+            margin-right: 8%;
+            font-size: 45px;
+            background-color: rgb(253, 87, 87);
+        }
+        #plus{
+            height: 80px;
+            width: 80px;
+            font-size: 45px;
+            margin-left: 1%;
+            background-color: rgb(15, 156, 15);
+        }
+        #count{
+            font-size: 50px;
+            width: 14%;
+        }
+    </style>
+</head>
+<body>
+    <h1>COUNTER</h1>
+    <div id="counter">
+        <button id="minus">-</button>
+        <p id="count">0</p>
+        <button id="plus">+</button>
+    </div>
+    <script>
+        var minus = document.getElementById("minus");
+    var plus = document.getElementById("plus");
+    count = document.getElementById("count");
+    var counter = 0;
+    updateCounter();
+
+    function updateCounter() {
+        count.innerHTML = counter;
+        if (counter <= 0) minus.style.color = "grey";
+        else minus.style.color = "black";
+    }
+
+    plus.addEventListener("click", () => {
+        counter++;
+        updateCounter();
+    });
+
+    minus.addEventListener("click", () => {
+
+
+        if (counter <= 0) {
+            minus.disable = true;
+        } else {
+            counter--;
+            minus.disable = false;
+        }
+        updateCounter();
+    });
+    </script>
+</body>
+</html>
