@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: darkslateblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+}
+
+.header {
+    background-color: #f7f7f7;
+
+}
+
+.header h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.form {
+    padding: 20px 30px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #f0f0f0;
+}
+
+.form-control i {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    margin-top: 5px;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    background-color: darkslateblue;
+    color: white;
+}
+
+.form-control.success input {
+    border-color: green;
+}
+
+.form-control.success .fa-check-circle {
+    visibility: visible;
+    color: green;
+}
+
+.form-control.error input {
+    border-color: red;
+}
+
+.form-control.error .fa-exclamation-circle {
+    color: red;
+    visibility: visible;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form action="" class="form" id="form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email Id</label>
+                <input type="text" id="email" placeholder="Enter Email Id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Enter Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Re-enter Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        //Selectors
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password1 = document.getElementById('password1');
+const password2 = document.getElementById('password2');
+const small = document.querySelector('small');
+
+//Event Handlers
+
+//form submission
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    checkInput();
+});
+
+//Functions
+function checkInput() {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const password1Value = password1.value.trim();
+    const password2Value = password2.value.trim();
+
+    if (usernameValue === '') {
+        showError(username, "Username can't be blank");
+    } else if (!isUsernameValid(usernameValue)) {
+        showError(username, "Username can have small letters and underscores only");
+    } else {
+        showSuccess(username);
+    }
+    if (emailValue === '') {
+        showError(email, "Email Id can't be blank");
+    } else if (!isEmailValid(emailValue)) {
+        showError(email, "Email Id is in valid");
+    } else {
+        showSuccess(email);
+    }
+    if (password1Value === '') {
+        showError(password1, "Password can't be blank");
+    } else {
+        showSuccess(password1);
+    }
+    if (password2Value === '') {
+        showError(password2, "Re-enter password");
+    } else if (password2Value != password1Value) {
+        showError(password2, "Password not matched!")
+    } else {
+        showSuccess(password2);
+    }
+}
+
+function showError(input, msg) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerHTML = msg;
+}
+
+function showSuccess(input) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control success';
+}
+
+function isEmailValid(email) {
+    return /^([a-zA-Z0-9_\.\-\+]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,3})$/.test(email);
+}
+
+function isUsernameValid(username) {
+    return /^[a-z_]+$/.test(username);
+}
+    </script>
+</body>
+</html>
